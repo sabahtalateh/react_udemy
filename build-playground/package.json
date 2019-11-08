@@ -1,0 +1,35 @@
+{
+  "name": "build-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": [
+    "last 2 chrome versions",
+    "last 2 firefox versions",
+    "last 1 edge version"
+  ],
+  "author": "sabahtalateh",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.3.5",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "file-loader": "^4.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
