@@ -1,7 +1,7 @@
 import 'styled-components'
 
 import { FontFamily } from '../src/theme/Theme'
-import { Action } from '../src/components/TodoList/models'
+import { Action } from '../src/components/TodoList/TodoListItem'
 
 declare module 'styled-components' {
 
@@ -10,6 +10,10 @@ declare module 'styled-components' {
         actionColors: {
             [Action.Done]: string,
             [Action.Remove]: string,
+            [Action.Important]: string,
+        },
+        colors: {
+            primary: string
         }
     }
 }

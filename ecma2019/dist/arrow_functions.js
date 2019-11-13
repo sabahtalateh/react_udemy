@@ -1,5 +1,6 @@
 'use strict';
 
+console.log("====ARROW FUNCTIONS====");
 var strings = ['1', '2', '3', '100'];
 
 // let toInt = function (x) {
@@ -39,7 +40,7 @@ var parent = {
 parent.printChildren();
 
 // Найти наибольшее нечётное число
-var strings2 = ['1', '2', '3', '100'];
+var strings2 = ['1', '2', '3', '100', '4', '6'];
 console.log(strings2);
 // Делаем из строк числа
 // O  O  O  O
@@ -67,8 +68,28 @@ console.log(evens);
 if (0 === evens.length) {
     console.log("No even elements");
 } else {
-    var max = evens.reduce(function (a, b) {
-        return Math.max(a, b);
-    }, evens[0]);
+    var sum = evens.reduce(function (a, b) {
+        console.log(a, b);
+        return a + b;
+    }, 0);
+    console.log("sum is " + sum);
+
+    var mul = evens.reduce(function (a, b) {
+        console.log(a, b);
+        return a * b;
+    }, 1);
+    console.log("mul is " + mul);
+
+    var id = evens.reduce(function (a, b) {
+        a.push(b);
+        return a;
+    }, []);
+    console.log(id);
+
+    var myMax = function myMax(acc, elem) {
+        var newAccum = Math.max(acc, elem);
+        return newAccum;
+    };
+    var max = evens.reduce(myMax, evens[0]);
     console.log(max);
 }

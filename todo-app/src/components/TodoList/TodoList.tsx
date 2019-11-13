@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import TodoListItem from './TodoListItem'
-import { TodoItem } from './models'
+import { Props as TodoItem } from './TodoListItem'
 
 import { ListGroup } from 'react-bootstrap'
 
@@ -10,11 +10,15 @@ const StyledListGroup = styled(ListGroup)`
 `
 
 
-const TodoList: React.FunctionComponent<{ todos: Array<TodoItem> }> = ({ todos }) => {
+interface Props {
+    todos: Array<TodoItem>,
+}
+
+const TodoList: React.FunctionComponent<Props> = ({ todos }) => {
     return (
         <StyledListGroup>
             { todos.map(todo => {
-                return <TodoListItem key={ todo.id } { ...todo }/>
+                return <TodoListItem key={ todo.id } { ...todo } onDelete={ todo.onDelete }/>
             }) }
         </StyledListGroup>
     )

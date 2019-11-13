@@ -40,6 +40,7 @@ module.exports = {
         port: 30303,
         writeToDisk: false,
         hot: true,
+        overlay: true
     },
     devtool: 'source-map',
 }
